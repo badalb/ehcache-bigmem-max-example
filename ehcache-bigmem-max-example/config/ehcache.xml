@@ -1,0 +1,16 @@
+<ehcache xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+     xsi:noNamespaceSchemaLocation="http://ehcache.org/ehcache.xsd" 
+     name="myBigMemoryMaxConfig"> 
+  <!-- Tell BigMemory where to write its data to disk. --> 
+  <diskStore path="/path/to/my/disk/store/directory"/> 
+   <terracottaConfig url="localhost:9510" /> 
+  <cache name="myBigMemoryMaxStore" 
+        maxBytesLocalHeap="5M" 
+        maxBytesLocalOffHeap="512M"> 
+    <terracotta/> 
+    <persistence strategy="distributed"/> 
+   
+  </cache> 
+
+
+</ehcache>
